@@ -7,6 +7,7 @@ import Homepage from './pages/Homepage'
 import SignUp from './pages/SignUp'
 import SignIn from './pages/SignIn'
 import Profile from './pages/Profile'
+import Chat from './pages/Chat'
 import FinishProfile from './pages/FinishProfile'
 import UploadImages from './pages/UploadImages'
 
@@ -27,6 +28,9 @@ function App() {
           <Route path='/upload-images' element={<PrivateRoute />}>
             <Route path='/upload-images' element={<UploadImages />} />
           </Route>
+          <Route path='/chat' element={<PrivateRoute />}>
+            <Route path='/chat' element={<Chat />} />
+            </Route>
         </Routes>
 
         <ToastContainer />
