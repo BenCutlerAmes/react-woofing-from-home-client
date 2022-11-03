@@ -1,8 +1,14 @@
 import React from 'react'
+import Input from './Input'
+import Message from './Message'
 
 function Messages() {
   return (
-    <div>Messages</div>
+        <>
+        <Message />
+        </>
+
+
   )
 }
 
