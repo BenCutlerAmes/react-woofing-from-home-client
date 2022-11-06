@@ -63,10 +63,11 @@ const SignUp = () => {
         email,
         timestamp: serverTimestamp(),
       })
-
+      await setDoc(doc(db, "userchats", user.uid), {})
       navigate('/finish-profile')
     } catch (error) {
       toast.error('Something went wrong with registration')
+      console.log(error)
     }
   }
 

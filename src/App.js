@@ -16,6 +16,7 @@ import HeaderTitle from './components/HeaderTitle'
 import AddDog from './pages/AddDog'
 import AllMatches from './pages/AllMatches'
 import Faq from './pages/Faq'
+import ChatPage from './pages/ChatPage'
 
 function App() {
   return (
@@ -65,6 +66,15 @@ function App() {
                   />
                 </Route>
                 <Route path='/matches/:matchID' element={<MatchProfile />} />
+
+                <Route path='/chat' element={<PrivateRoute />}>
+                  <Route
+                    path='/chat'
+                    element={<ChatPage />}
+                  />
+                  </Route>
+
+
               </Routes>
               <ToastContainer />
             </div>
